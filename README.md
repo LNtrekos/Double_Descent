@@ -20,7 +20,7 @@ In the folder code, Python scripts are included for the two examples we were con
 
 ```bash
 
-C:\\Double\_Descent\\code> python NaturalSplines\_example.py
+C:\Double\_Descent\code> python NaturalSplines_example.py
 
 ```
 
@@ -34,7 +34,7 @@ and
 
 ```bash
 
-C:Double\_Descent\\code> python rff\_example.py
+C:Double_Descent\code> python rff_example.py
 
 ```
 
