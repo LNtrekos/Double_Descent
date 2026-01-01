@@ -4,7 +4,6 @@ from sklearn.preprocessing import SplineTransformer
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 
-
 # --- Generate data ---
 np.random.seed(911)
 n_train = 20
@@ -17,7 +16,6 @@ len(x_train) ; len(y_train)
 x_test = np.random.uniform(-5, 5, 10000)
 y_true = np.sin(x_test)
 len(x_train) ; len(y_train)
-
 
 d = 20 # df 
 
@@ -73,7 +71,7 @@ print(degress_to_fit)
 train_mse_counter = [] ; test_mse_counter = [] ; b2_norm_counter = []
 for d in degress_to_fit:
     natural_spline = SplineTransformer(
-        degree = 1, n_knots = d,
+        degree = 3, n_knots = d,
         knots="quantile", extrapolation="linear", # THIS makes it a natural spline
         include_bias=True
     )
@@ -98,10 +96,6 @@ for d in degress_to_fit:
     train_mse_counter.append(train_mse) 
     test_mse_counter.append(test_mse)  
     b2_norm_counter.append(b2_norm)
-
-
-
-
 
 degrees = degress_to_fit
 
